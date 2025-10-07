@@ -1,0 +1,109 @@
+<div class="dashboard-container">
+  <!-- HEADER -->
+  <div class="dashboard-header">
+    <div>
+      <h1 class="dashboard-title">Tableau de bord</h1>
+      <p class="dashboard-subtitle">Gérez et partagez vos ressources pédagogiques facilement</p>
+    </div>
+    <button class="btn btn-outline-primary d-flex align-items-center" (click)="loadFiles()">
+      <i class="bi bi-arrow-clockwise me-2"></i> Actualiser
+    </button>
+  </div>
+
+  <div class="row g-4 align-items-start">
+    <!-- Upload Section -->
+    <div class="col-12 col-lg-4">
+      <div class="card p-4 shadow-sm">
+        <div class="mb-3 border-bottom pb-2">
+          <h3 class="card-title mb-0">
+            <span class="me-2">📤</span> Ajouter une ressource
+          </h3>
+          <small class="text-muted">Déposez vos cours, TD, TP ou documents utiles</small>
+        </div>
+
+        <form (ngSubmit)="onUpload()" class="upload-form">
+          <div class="mb-3">
+            <label class="form-label">Titre de la ressource</label>
+            <input 
+              class="form-control" 
+              [(ngModel)]="title" 
+              name="title" 
+              placeholder="Ex: Cours d’algorithmique"
+              required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Type de ressource</label>
+            <select class="form-select" [(ngModel)]="type" name="type" required>
+              <option [value]="0">📖 Cours</option>
+              <option [value]="1">📝 TD</option>
+              <option [value]="2">🔬 TP</option>
+              <option [value]="3">📁 Autre</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Fichier</label>
+            <input type="file" class="form-control" (change)="onFileSelected($event)" required>
+            <small class="form-text text-muted">Formats acceptés : PDF, DOCX, PPTX</small>
+          </div>
+
+          <button class="btn btn-primary w-100" [disabled]="uploading">
+            <ng-container *ngIf="!uploading">
+              <i class="bi bi-cloud-upload me-2"></i> Uploader la ressource
+            </ng-container>
+            <ng-container *ngIf="uploading">
+              <span class="spinner-border spinner-border-sm me-2"></span> Upload en cours...
+            </ng-container>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Files List Section -->
+    <div class="col-12 col-lg-8">
+      <div class="files-section">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h3 class="section-title mb-0">
+            <span class="me-2">📚</span> Mes ressources ({{ files.length }})
+          </h3>
+        </div>
+
+        <div *ngIf="files.length > 0; else noFiles">
+          <div class="files-grid">
+            <div class="file-card" *ngFor="let f of files">
+              <div class="file-header">
+                <div class="file-info">
+                  <h4 class="file-title">{{ f.title }}</h4>
+                  <span class="file-type-badge">{{ getTypeLabel(f.type) }}</span>
+                </div>
+                <button 
+                  class="btn-delete"
+                  (click)="delete(f.id)"
+                  [disabled]="deletingId===f.id"
+                  title="Supprimer cette ressource">
+                  <ng-container *ngIf="deletingId!==f.id">🗑️</ng-container>
+                  <ng-container *ngIf="deletingId===f.id">
+                    <span class="spinner-border spinner-border-sm"></span>
+                  </ng-container>
+                </button>
+              </div>
+
+              <a class="btn btn-outline-primary btn-sm w-100 mt-3" [href]="f.url" target="_blank">
+                <i class="bi bi-download me-2"></i> Télécharger
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <ng-template #noFiles>
+          <div class="empty-state">
+            <div class="empty-icon">📭</div>
+            <p class="empty-text">Aucune ressource pour le moment</p>
+            <p class="empty-subtext">Ajoutez vos premiers fichiers pour commencer</p>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\EduPlatform.API",
+    "\\EduPlatform.API\\Controllers",
+    "\\EduPlatform.API\\Models",
+    "\\EduPlatform.API\\Repositories",
+    "\\EduPlatform.API\\Repositories\\Implementations",
+    "\\EduPlatform.API\\Services"
+  ],
+  "SelectedNode": "\\EduPlatform.API\\Controllers\\PublicController.cs",
+  "PreviewInSolutionExplorer": false
+}

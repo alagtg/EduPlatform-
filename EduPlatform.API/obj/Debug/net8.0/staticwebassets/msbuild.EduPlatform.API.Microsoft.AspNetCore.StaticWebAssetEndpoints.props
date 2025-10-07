@@ -1,0 +1,40 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/EduPlatform.API/Uploads/166af624-ee15-4a0c-9e81-4067297219c6.k10udnmpb6.zip">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\166af624-ee15-4a0c-9e81-4067297219c6.zip'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"k10udnmpb6"},{"Name":"integrity","Value":"sha256-SBvm68alG0ncBO1yt0AmIRdMKXCudBd\u002BcHYe89Tlfl8="},{"Name":"label","Value":"_content/EduPlatform.API/Uploads/166af624-ee15-4a0c-9e81-4067297219c6.zip"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"16094"},{"Name":"Content-Type","Value":"application/x-zip-compressed"},{"Name":"ETag","Value":"\u0022SBvm68alG0ncBO1yt0AmIRdMKXCudBd\u002BcHYe89Tlfl8=\u0022"},{"Name":"Last-Modified","Value":"Mon, 06 Oct 2025 15:12:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/EduPlatform.API/Uploads/166af624-ee15-4a0c-9e81-4067297219c6.zip">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\166af624-ee15-4a0c-9e81-4067297219c6.zip'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-SBvm68alG0ncBO1yt0AmIRdMKXCudBd\u002BcHYe89Tlfl8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"16094"},{"Name":"Content-Type","Value":"application/x-zip-compressed"},{"Name":"ETag","Value":"\u0022SBvm68alG0ncBO1yt0AmIRdMKXCudBd\u002BcHYe89Tlfl8=\u0022"},{"Name":"Last-Modified","Value":"Mon, 06 Oct 2025 15:12:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/EduPlatform.API/Uploads/1a278897-3724-4eb9-a3e6-f2b106c1a237.PNG">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\1a278897-3724-4eb9-a3e6-f2b106c1a237.PNG'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-aWBzZs4ksoIkYCTqldFf5sj/t6rkue1pVrQB74t3Iqg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"70075"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022aWBzZs4ksoIkYCTqldFf5sj/t6rkue1pVrQB74t3Iqg=\u0022"},{"Name":"Last-Modified","Value":"Mon, 06 Oct 2025 14:55:39 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/EduPlatform.API/Uploads/1a278897-3724-4eb9-a3e6-f2b106c1a237.tb0b2mzcsu.PNG">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\1a278897-3724-4eb9-a3e6-f2b106c1a237.PNG'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"tb0b2mzcsu"},{"Name":"integrity","Value":"sha256-aWBzZs4ksoIkYCTqldFf5sj/t6rkue1pVrQB74t3Iqg="},{"Name":"label","Value":"_content/EduPlatform.API/Uploads/1a278897-3724-4eb9-a3e6-f2b106c1a237.PNG"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"70075"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022aWBzZs4ksoIkYCTqldFf5sj/t6rkue1pVrQB74t3Iqg=\u0022"},{"Name":"Last-Modified","Value":"Mon, 06 Oct 2025 14:55:39 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/EduPlatform.API/Uploads/e2cc2909-6504-4c7b-b994-630da0fbe162.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\e2cc2909-6504-4c7b-b994-630da0fbe162.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-b8IZav0mXlRNRL0XRHlv39ZCvL76fZx\u002BCQfKc840h08="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"82713"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022b8IZav0mXlRNRL0XRHlv39ZCvL76fZx\u002BCQfKc840h08=\u0022"},{"Name":"Last-Modified","Value":"Mon, 06 Oct 2025 14:53:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/EduPlatform.API/Uploads/e2cc2909-6504-4c7b-b994-630da0fbe162.vk4d61g8tr.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\e2cc2909-6504-4c7b-b994-630da0fbe162.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vk4d61g8tr"},{"Name":"integrity","Value":"sha256-b8IZav0mXlRNRL0XRHlv39ZCvL76fZx\u002BCQfKc840h08="},{"Name":"label","Value":"_content/EduPlatform.API/Uploads/e2cc2909-6504-4c7b-b994-630da0fbe162.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"82713"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022b8IZav0mXlRNRL0XRHlv39ZCvL76fZx\u002BCQfKc840h08=\u0022"},{"Name":"Last-Modified","Value":"Mon, 06 Oct 2025 14:53:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

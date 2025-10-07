@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\Uploads\\166af624-ee15-4a0c-9e81-4067297219c6.zip",
+      "PackagePath": "staticwebassets\\Uploads\\166af624-ee15-4a0c-9e81-4067297219c6.zip"
+    },
+    {
+      "Id": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\Uploads\\1a278897-3724-4eb9-a3e6-f2b106c1a237.PNG",
+      "PackagePath": "staticwebassets\\Uploads\\1a278897-3724-4eb9-a3e6-f2b106c1a237.PNG"
+    },
+    {
+      "Id": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\Uploads\\e2cc2909-6504-4c7b-b994-630da0fbe162.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\e2cc2909-6504-4c7b-b994-630da0fbe162.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EduPlatform.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EduPlatform.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.EduPlatform.API.props",
+      "PackagePath": "build\\EduPlatform.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.EduPlatform.API.props",
+      "PackagePath": "buildMultiTargeting\\EduPlatform.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.EduPlatform.API.props",
+      "PackagePath": "buildTransitive\\EduPlatform.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

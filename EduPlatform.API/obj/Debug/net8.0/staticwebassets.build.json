@@ -1,0 +1,331 @@
+{
+  "Version": 1,
+  "Hash": "81/vKflIpA8xttBs/h3aZ+XmkyMOyLkktlF9rTcQEt8=",
+  "Source": "EduPlatform.API",
+  "BasePath": "_content/EduPlatform.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EduPlatform.API\\wwwroot",
+      "Source": "EduPlatform.API",
+      "ContentRoot": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\",
+      "BasePath": "_content/EduPlatform.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\Uploads\\166af624-ee15-4a0c-9e81-4067297219c6.zip",
+      "SourceId": "EduPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\",
+      "BasePath": "_content/EduPlatform.API",
+      "RelativePath": "Uploads/166af624-ee15-4a0c-9e81-4067297219c6#[.{fingerprint}]?.zip",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k10udnmpb6",
+      "Integrity": "SBvm68alG0ncBO1yt0AmIRdMKXCudBd+cHYe89Tlfl8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\166af624-ee15-4a0c-9e81-4067297219c6.zip"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\Uploads\\1a278897-3724-4eb9-a3e6-f2b106c1a237.PNG",
+      "SourceId": "EduPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\",
+      "BasePath": "_content/EduPlatform.API",
+      "RelativePath": "Uploads/1a278897-3724-4eb9-a3e6-f2b106c1a237#[.{fingerprint}]?.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tb0b2mzcsu",
+      "Integrity": "aWBzZs4ksoIkYCTqldFf5sj/t6rkue1pVrQB74t3Iqg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\1a278897-3724-4eb9-a3e6-f2b106c1a237.PNG"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\Uploads\\e2cc2909-6504-4c7b-b994-630da0fbe162.pdf",
+      "SourceId": "EduPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\",
+      "BasePath": "_content/EduPlatform.API",
+      "RelativePath": "Uploads/e2cc2909-6504-4c7b-b994-630da0fbe162#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vk4d61g8tr",
+      "Integrity": "b8IZav0mXlRNRL0XRHlv39ZCvL76fZx+CQfKc840h08=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\e2cc2909-6504-4c7b-b994-630da0fbe162.pdf"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "Uploads/166af624-ee15-4a0c-9e81-4067297219c6.k10udnmpb6.zip",
+      "AssetFile": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\Uploads\\166af624-ee15-4a0c-9e81-4067297219c6.zip",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16094"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-zip-compressed"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SBvm68alG0ncBO1yt0AmIRdMKXCudBd+cHYe89Tlfl8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Oct 2025 15:12:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k10udnmpb6"
+        },
+        {
+          "Name": "label",
+          "Value": "Uploads/166af624-ee15-4a0c-9e81-4067297219c6.zip"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SBvm68alG0ncBO1yt0AmIRdMKXCudBd+cHYe89Tlfl8="
+        }
+      ]
+    },
+    {
+      "Route": "Uploads/166af624-ee15-4a0c-9e81-4067297219c6.zip",
+      "AssetFile": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\Uploads\\166af624-ee15-4a0c-9e81-4067297219c6.zip",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16094"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-zip-compressed"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SBvm68alG0ncBO1yt0AmIRdMKXCudBd+cHYe89Tlfl8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Oct 2025 15:12:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SBvm68alG0ncBO1yt0AmIRdMKXCudBd+cHYe89Tlfl8="
+        }
+      ]
+    },
+    {
+      "Route": "Uploads/1a278897-3724-4eb9-a3e6-f2b106c1a237.PNG",
+      "AssetFile": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\Uploads\\1a278897-3724-4eb9-a3e6-f2b106c1a237.PNG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70075"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aWBzZs4ksoIkYCTqldFf5sj/t6rkue1pVrQB74t3Iqg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Oct 2025 14:55:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aWBzZs4ksoIkYCTqldFf5sj/t6rkue1pVrQB74t3Iqg="
+        }
+      ]
+    },
+    {
+      "Route": "Uploads/1a278897-3724-4eb9-a3e6-f2b106c1a237.tb0b2mzcsu.PNG",
+      "AssetFile": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\Uploads\\1a278897-3724-4eb9-a3e6-f2b106c1a237.PNG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70075"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aWBzZs4ksoIkYCTqldFf5sj/t6rkue1pVrQB74t3Iqg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Oct 2025 14:55:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tb0b2mzcsu"
+        },
+        {
+          "Name": "label",
+          "Value": "Uploads/1a278897-3724-4eb9-a3e6-f2b106c1a237.PNG"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aWBzZs4ksoIkYCTqldFf5sj/t6rkue1pVrQB74t3Iqg="
+        }
+      ]
+    },
+    {
+      "Route": "Uploads/e2cc2909-6504-4c7b-b994-630da0fbe162.pdf",
+      "AssetFile": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\Uploads\\e2cc2909-6504-4c7b-b994-630da0fbe162.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82713"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b8IZav0mXlRNRL0XRHlv39ZCvL76fZx+CQfKc840h08=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Oct 2025 14:53:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-b8IZav0mXlRNRL0XRHlv39ZCvL76fZx+CQfKc840h08="
+        }
+      ]
+    },
+    {
+      "Route": "Uploads/e2cc2909-6504-4c7b-b994-630da0fbe162.vk4d61g8tr.pdf",
+      "AssetFile": "C:\\Users\\PC\\desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\wwwroot\\Uploads\\e2cc2909-6504-4c7b-b994-630da0fbe162.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82713"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b8IZav0mXlRNRL0XRHlv39ZCvL76fZx+CQfKc840h08=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 06 Oct 2025 14:53:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vk4d61g8tr"
+        },
+        {
+          "Name": "label",
+          "Value": "Uploads/e2cc2909-6504-4c7b-b994-630da0fbe162.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-b8IZav0mXlRNRL0XRHlv39ZCvL76fZx+CQfKc840h08="
+        }
+      ]
+    }
+  ]
+}

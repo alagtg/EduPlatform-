@@ -1,0 +1,50 @@
+<div class="public-container">
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-header">
+        <h1 class="hero-title">{{ profName }}</h1>
+        <span class="hero-badge">Espace Public</span>
+      </div>
+      <p class="hero-description">
+        Ressources pédagogiques partagées par le professeur
+      </p>
+    </div>
+  </section>
+
+  <section class="resources-section">
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="me-2">📚</span>
+        Ressources disponibles
+      </h2>
+      <span class="resource-count">{{ files.length }} ressource(s)</span>
+    </div>
+
+    <div class="resources-grid" *ngIf="files.length > 0">
+      <div class="resource-card" *ngFor="let f of files">
+        <div class="resource-icon">
+          <span *ngIf="f.type === 0">📖</span>
+          <span *ngIf="f.type === 1">📝</span>
+          <span *ngIf="f.type === 2">🔬</span>
+          <span *ngIf="f.type === 3">📁</span>
+        </div>
+        
+        <div class="resource-content">
+          <h3 class="resource-title">{{ f.title }}</h3>
+          <span class="resource-type">{{ getTypeLabel(f.type) }}</span>
+        </div>
+        
+        <a class="btn btn-primary w-100 download-btn" [href]="f.url" target="_blank">
+          <span class="me-2">⬇️</span>
+          Télécharger
+        </a>
+      </div>
+    </div>
+
+    <div class="empty-state" *ngIf="files.length === 0">
+      <div class="empty-icon">📭</div>
+      <p class="empty-text">Aucune ressource disponible</p>
+      <p class="empty-subtext">Le professeur n'a pas encore partagé de ressources</p>
+    </div>
+  </section>
+</div>

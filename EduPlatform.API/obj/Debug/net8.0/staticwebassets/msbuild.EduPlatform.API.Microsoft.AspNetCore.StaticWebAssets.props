@@ -1,0 +1,58 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\166af624-ee15-4a0c-9e81-4067297219c6.zip'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EduPlatform.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EduPlatform.API</BasePath>
+      <RelativePath>Uploads/166af624-ee15-4a0c-9e81-4067297219c6.zip</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>k10udnmpb6</Fingerprint>
+      <Integrity>SBvm68alG0ncBO1yt0AmIRdMKXCudBd+cHYe89Tlfl8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\166af624-ee15-4a0c-9e81-4067297219c6.zip'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\1a278897-3724-4eb9-a3e6-f2b106c1a237.PNG'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EduPlatform.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EduPlatform.API</BasePath>
+      <RelativePath>Uploads/1a278897-3724-4eb9-a3e6-f2b106c1a237.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>tb0b2mzcsu</Fingerprint>
+      <Integrity>aWBzZs4ksoIkYCTqldFf5sj/t6rkue1pVrQB74t3Iqg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\1a278897-3724-4eb9-a3e6-f2b106c1a237.PNG'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\e2cc2909-6504-4c7b-b994-630da0fbe162.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EduPlatform.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EduPlatform.API</BasePath>
+      <RelativePath>Uploads/e2cc2909-6504-4c7b-b994-630da0fbe162.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vk4d61g8tr</Fingerprint>
+      <Integrity>b8IZav0mXlRNRL0XRHlv39ZCvL76fZx+CQfKc840h08=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\e2cc2909-6504-4c7b-b994-630da0fbe162.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>
