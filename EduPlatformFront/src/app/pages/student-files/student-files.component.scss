@@ -1,0 +1,76 @@
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.files-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.file-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.file-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.file-type {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+
+.file-type.cours {
+  background-color: #007bff;
+}
+.file-type.td {
+  background-color: #28a745;
+}
+.file-type.tp {
+  background-color: #ffc107;
+  color: #222;
+}
+.file-type.autre {
+  background-color: #dc3545;
+}
+
+.file-title {
+  font-weight: 600;
+  color: #333;
+  margin: 0.4rem 0;
+}
+
+.file-date {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 0.6rem;
+}
+
+.file-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.file-description {
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+  margin-top: -4px;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}

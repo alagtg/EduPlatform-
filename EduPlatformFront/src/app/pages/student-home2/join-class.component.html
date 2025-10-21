@@ -1,0 +1,26 @@
+<section class="student-home container py-5">
+  <h1 class="text-center fw-bold mb-4">Rejoindre une classe</h1>
+  <p class="text-center text-muted mb-5">Entrez le code fourni par votre professeur pour accéder à votre classe.</p>
+
+  <form (ngSubmit)="join()" class="card p-4 shadow-sm mx-auto" style="max-width:500px">
+    <div class="mb-3">
+      <label class="form-label">Code d’accès</label>
+      <input type="text" [(ngModel)]="code" name="code" class="form-control" placeholder="Ex : CL-AB12CD" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Rejoindre</button>
+    <p class="text-center mt-2 text-danger">{{ msg }}</p>
+  </form>
+
+  <div *ngIf="loading" class="text-center my-4">
+    <div class="spinner-border text-primary"></div>
+  </div>
+
+
+  <div *ngIf="classData" class="card p-4 shadow-sm mt-4">
+    <h4 class="fw-bold text-primary">{{ classData.name }}</h4>
+    <p class="text-muted mb-1">{{ classData.description }}</p>
+    <p><strong>Code :</strong> {{ classData.accessCode }}</p>
+    <p><strong>Créée le :</strong> {{ classData.createdAt | date:'short' }}</p>
+  </div>
+</section>

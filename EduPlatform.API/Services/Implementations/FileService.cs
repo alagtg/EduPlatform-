@@ -2,109 +2,133 @@ using EduPlatform.API.DTOs.Files;
 using EduPlatform.API.Models;
 using EduPlatform.API.Repositories.Interfaces;
 using EduPlatform.API.Services.Interfaces;
-using Microsoft.AspNetCore.StaticFiles;
-using Microsoft.Extensions.Configuration;
 
 namespace EduPlatform.API.Services.Implementations
 {
     public class FileService : IFileService
     {
-        private readonly IFileRepository _fileRepo;
-        private readonly IProfRepository _profRepo;
-        private readonly IConfiguration _cfg;
-        private readonly string _root;
-        private readonly string _folder;
+        private readonly IFileRepository _repo;
+        private readonly IWebHostEnvironment _env;
 
-        public FileService(IFileRepository fileRepo, IProfRepository profRepo, IConfiguration cfg, IWebHostEnvironment env)
+        public FileService(IFileRepository repo, IWebHostEnvironment env)
         {
-            _fileRepo = fileRepo; _profRepo = profRepo; _cfg = cfg;
-            _root = Path.Combine(env.ContentRootPath, _cfg["Upload:Root"] ?? "wwwroot");
-            _folder = _cfg["Upload:Folder"] ?? "Uploads";
-            Directory.CreateDirectory(Path.Combine(_root, _folder));
+            _repo = repo;
+            _env = env;
         }
 
+        // =====================================================
+        // ✅ 1️⃣ Upload de fichier
+        // =====================================================
         public async Task<FileResponse> UploadAsync(int profId, FileUploadRequest request)
         {
-            var prof = await _profRepo.GetByIdAsync(profId) ?? throw new KeyNotFoundException("Prof introuvable");
-            var ext = Path.GetExtension(request.File.FileName);
-            var fileName = $"{Guid.NewGuid()}{ext}";
+            // 📂 Dossier de destination
+            var uploadsDir = Path.Combine(_env.WebRootPath ?? "wwwroot", "uploads");
+            if (!Directory.Exists(uploadsDir))
+                Directory.CreateDirectory(uploadsDir);
 
-            var relPath = Path.Combine(_folder, fileName).Replace("\\", "/");
-            var absPath = Path.Combine(_root, relPath.Replace("/", Path.DirectorySeparatorChar.ToString()));
+            // 📄 Nom unique du fichier
+            var uniqueName = $"{Guid.NewGuid()}_{request.File.FileName}";
+            var filePath = Path.Combine(uploadsDir, uniqueName);
 
-            using (var stream = new FileStream(absPath, FileMode.Create))
+            // 💾 Sauvegarde physique
+            using (var stream = new FileStream(filePath, FileMode.Create))
             {
                 await request.File.CopyToAsync(stream);
             }
 
-            var entity = new FileResource
+            // 🗂 Enregistrement en base
+            var file = new FileResource
             {
-                ProfId = prof.Id,
                 Title = request.Title,
+                FileName = uniqueName,
+                FilePath = filePath,
+                ProfId = profId,
+                ClassroomId = request.ClassId,
                 Type = request.Type,
-                Path = "/" + relPath
+                CreatedAt = DateTime.UtcNow
             };
 
-            await _fileRepo.AddAsync(entity);
-            await _fileRepo.SaveAsync();
+            await _repo.AddAsync(file);
+            await _repo.SaveAsync();
 
             return new FileResponse
             {
-                Id = entity.Id,
-                Title = entity.Title,
-                Type = entity.Type,
-                Url = entity.Path,
-                DownloadCount = entity.DownloadCount,
-                CreatedAt = entity.CreatedAt,
-                ProfSlug = prof.Slug
+                Id = file.Id,
+                Title = file.Title,
+                FileName = file.FileName,
+                FileUrl = $"/uploads/{file.FileName}",
+                Type = file.Type.ToString(),
+                ClassroomName = file.Classroom?.Name,
+                CreatedAt = file.CreatedAt
             };
         }
 
-        public async Task<List<FileResponse>> ListByProfSlugAsync(string slug, string baseUrl)
+        // =====================================================
+        // ✅ 2️⃣ Suppression de fichier
+        // =====================================================
+        public async Task DeleteAsync(int id, int profId)
         {
-            var list = await _fileRepo.GetByProfSlugAsync(slug);
-            return list.Select(f => new FileResponse
+            var file = await _repo.GetByIdAsync(id);
+            if (file == null || file.ProfId != profId)
+                throw new Exception("Fichier introuvable ou non autorisé.");
+
+            if (File.Exists(file.FilePath))
+                File.Delete(file.FilePath);
+
+            _repo.Remove(file);
+            await _repo.SaveAsync();
+        }
+
+        // =====================================================
+        // ✅ 3️⃣ Téléchargement d’un fichier
+        // =====================================================
+        public async Task<(Stream stream, string fileName, string contentType)?> GetForDownloadAsync(int id)
+        {
+            var file = await _repo.GetByIdAsync(id);
+            if (file == null || !File.Exists(file.FilePath))
+                return null;
+
+            var stream = new FileStream(file.FilePath, FileMode.Open, FileAccess.Read);
+            var contentType = "application/octet-stream";
+            return (stream, file.FileName, contentType);
+        }
+
+        // =====================================================
+        // ✅ 4️⃣ Liste par professeur (slug)
+        // =====================================================
+        public async Task<IEnumerable<FileResponse>> ListByProfSlugAsync(string slug, string baseUrl)
+        {
+            var files = await _repo.GetByProfSlugAsync(slug);
+
+            return files.Select(f => new FileResponse
             {
                 Id = f.Id,
                 Title = f.Title,
-                Type = f.Type,
-                Url = CombineBase(baseUrl, f.Path),
-                DownloadCount = f.DownloadCount,
-                CreatedAt = f.CreatedAt,
-                ProfSlug = f.Prof.Slug
-            }).ToList();
+                FileName = f.FileName,
+                FileUrl = $"{baseUrl}/uploads/{f.FileName}",
+                Type = f.Type.ToString(),
+                ClassroomName = f.Classroom?.Name,
+                CreatedAt = f.CreatedAt
+            });
         }
 
-        public async Task<(Stream stream, string fileName, string contentType)?> GetForDownloadAsync(int id)
+        // =====================================================
+        // ✅ 5️⃣ Liste par classe
+        // =====================================================
+        public async Task<IEnumerable<FileResponse>> ListByClassAsync(int classId, string baseUrl)
         {
-            var fr = await _fileRepo.GetByIdAsync(id);
-            if (fr == null) return null;
+            var files = await _repo.GetByClassIdAsync(classId);
 
-            var absPath = Path.Combine(_root, fr.Path.TrimStart('/').Replace("/", Path.DirectorySeparatorChar.ToString()));
-            if (!File.Exists(absPath)) return null;
-
-            new FileExtensionContentTypeProvider().TryGetContentType(absPath, out var ct);
-            ct ??= "application/octet-stream";
-
-            fr.DownloadCount++;
-            await _fileRepo.SaveAsync();
-
-            return (File.OpenRead(absPath), Path.GetFileName(absPath), ct);
+            return files.Select(f => new FileResponse
+            {
+                Id = f.Id,
+                Title = f.Title,
+                FileName = f.FileName,
+                FileUrl = $"{baseUrl}/uploads/{f.FileName}",
+                Type = f.Type.ToString(),
+                ClassroomName = f.Classroom?.Name,
+                CreatedAt = f.CreatedAt
+            });
         }
-
-        public async Task DeleteAsync(int id, int profId)
-        {
-            var fr = await _fileRepo.GetByIdAsync(id) ?? throw new KeyNotFoundException("Fichier introuvable");
-            if (fr.ProfId != profId) throw new UnauthorizedAccessException("Non autorisé");
-
-            var absPath = Path.Combine(_root, fr.Path.TrimStart('/').Replace("/", Path.DirectorySeparatorChar.ToString()));
-            if (File.Exists(absPath)) File.Delete(absPath);
-
-            await _fileRepo.DeleteAsync(fr);
-            await _fileRepo.SaveAsync();
-        }
-
-        private static string CombineBase(string baseUrl, string rel) =>
-            baseUrl.TrimEnd('/') + "/" + rel.TrimStart('/');
     }
 }

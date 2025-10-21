@@ -1,4 +1,4 @@
-using EduPlatform.API.DTOs.Comments;
+﻿using EduPlatform.API.DTOs.Comments;
 using EduPlatform.API.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +21,13 @@ namespace EduPlatform.API.Controllers
         {
             var baseUrl = $"{Request.Scheme}://{Request.Host}";
             var list = await _files.ListByProfSlugAsync(profSlug, baseUrl);
+            return Ok(list);
+        }
+        [HttpGet("files/{classId:int}")]
+        public async Task<IActionResult> GetByClass(int classId)
+        {
+            var baseUrl = $"{Request.Scheme}://{Request.Host}";
+            var list = await _files.ListByClassAsync(classId, baseUrl);
             return Ok(list);
         }
 

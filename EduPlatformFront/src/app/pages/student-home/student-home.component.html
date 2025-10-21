@@ -1,7 +1,7 @@
 <section class="student-home container py-5">
   <h1 class="mb-4 text-center fw-bold">Espace Étudiant</h1>
   <p class="text-center text-muted mb-5">
-    Sélectionnez un professeur pour consulter ses cours, TD et TP.
+    Sélectionnez un professeur pour voir ses classes.
   </p>
 
   <div *ngIf="loading" class="text-center my-5">
@@ -14,8 +14,10 @@
         <div class="card-body">
           <h4 class="fw-bold">{{ prof.name }}</h4>
           <p class="text-muted mb-3">{{ prof.email }}</p>
-          <a [routerLink]="['/prof', prof.slug]" class="btn btn-primary">
-            Voir les ressources
+
+          <!-- 🔽 Nouveau lien vers les classes du prof -->
+          <a [routerLink]="['/student', prof.slug, 'classes']" class="btn btn-primary">
+            Voir les classes
           </a>
         </div>
       </div>

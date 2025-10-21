@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Data",
+    "\\Models",
+    "\\Repositories",
+    "\\Repositories\\Implementations",
+    "\\Services",
+    "\\Services\\Implementations",
+    "\\Services\\Interfaces",
+    "\\wwwroot\\Uploads",
+    "\\wwwroot\\Uploads\\cahiers"
+  ],
+  "SelectedNode": "\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}

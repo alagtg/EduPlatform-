@@ -1,0 +1,446 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Controllers\\CahierPedagogiqueController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\CahierPedagogiqueController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Models\\Classroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Classroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Data\\EduDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\EduDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Models\\CahierPedagogique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\CahierPedagogique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Controllers\\ClassroomController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\ClassroomController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Controllers\\ProfController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\ProfController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Controllers\\FilesController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\FilesController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Services\\Implementations\\FileService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\Implementations\\FileService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Repositories\\Implementations\\FileRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repositories\\Implementations\\FileRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Models\\FileResource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\FileResource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Controllers\\PublicController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\PublicController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\DTOs\\Files\\FileUploadRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DTOs\\Files\\FileUploadRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Repositories\\Implementations\\ClassroomRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repositories\\Implementations\\ClassroomRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Repositories\\Interfaces\\IFileRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repositories\\Interfaces\\IFileRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Models\\Comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\DTOs\\Files\\FileResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DTOs\\Files\\FileResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Models\\Prof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Prof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\DTOs\\Classroom\\ClassResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DTOs\\Classroom\\ClassResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Services\\Implementations\\ClassroomService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\Implementations\\ClassroomService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Services\\Interfaces\\IClassroomService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\Interfaces\\IClassroomService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Repositories\\Interfaces\\IClassroomRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repositories\\Interfaces\\IClassroomRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\DTOs\\Classroom\\CreateClassRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DTOs\\Classroom\\CreateClassRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Services\\Implementations\\AuthService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\Implementations\\AuthService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Classroom.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Models\\Classroom.cs",
+              "RelativeDocumentMoniker": "Models\\Classroom.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Models\\Classroom.cs",
+              "RelativeToolTip": "Models\\Classroom.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T15:19:27.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EduDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Data\\EduDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\EduDbContext.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Data\\EduDbContext.cs",
+              "RelativeToolTip": "Data\\EduDbContext.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAowBgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T15:16:10.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CahierPedagogiqueController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Controllers\\CahierPedagogiqueController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CahierPedagogiqueController.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Controllers\\CahierPedagogiqueController.cs",
+              "RelativeToolTip": "Controllers\\CahierPedagogiqueController.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAiwIQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T12:09:40.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CahierPedagogique.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Models\\CahierPedagogique.cs",
+              "RelativeDocumentMoniker": "Models\\CahierPedagogique.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Models\\CahierPedagogique.cs",
+              "RelativeToolTip": "Models\\CahierPedagogique.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAowCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T12:08:42.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAgwLIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T13:54:10.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClassroomController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Controllers\\ClassroomController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClassroomController.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Controllers\\ClassroomController.cs",
+              "RelativeToolTip": "Controllers\\ClassroomController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T13:55:08.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProfController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Controllers\\ProfController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProfController.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Controllers\\ProfController.cs",
+              "RelativeToolTip": "Controllers\\ProfController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T17:38:30.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FilesController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Controllers\\FilesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FilesController.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Controllers\\FilesController.cs",
+              "RelativeToolTip": "Controllers\\FilesController.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAIwEkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T13:57:18.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FileService.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Services\\Implementations\\FileService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\FileService.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Services\\Implementations\\FileService.cs",
+              "RelativeToolTip": "Services\\Implementations\\FileService.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowFoAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T16:45:55.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Repositories\\Implementations\\FileRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\FileRepository.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Repositories\\Implementations\\FileRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\FileRepository.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAswDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T16:47:53.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FileResource.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Models\\FileResource.cs",
+              "RelativeDocumentMoniker": "Models\\FileResource.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Models\\FileResource.cs",
+              "RelativeToolTip": "Models\\FileResource.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T14:26:01.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PublicController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Controllers\\PublicController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PublicController.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Controllers\\PublicController.cs",
+              "RelativeToolTip": "Controllers\\PublicController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAmwBUAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T16:46:42.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FileUploadRequest.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\DTOs\\Files\\FileUploadRequest.cs",
+              "RelativeDocumentMoniker": "DTOs\\Files\\FileUploadRequest.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\DTOs\\Files\\FileUploadRequest.cs",
+              "RelativeToolTip": "DTOs\\Files\\FileUploadRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T16:43:33.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ClassroomRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Repositories\\Implementations\\ClassroomRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\ClassroomRepository.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Repositories\\Implementations\\ClassroomRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\ClassroomRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAwB0AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T14:02:44.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IFileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Repositories\\Interfaces\\IFileRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IFileRepository.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Repositories\\Interfaces\\IFileRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IFileRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T16:47:16.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "Models\\Comment.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Models\\Comment.cs",
+              "RelativeToolTip": "Models\\Comment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T14:22:41.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FileResponse.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\DTOs\\Files\\FileResponse.cs",
+              "RelativeDocumentMoniker": "DTOs\\Files\\FileResponse.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\DTOs\\Files\\FileResponse.cs",
+              "RelativeToolTip": "DTOs\\Files\\FileResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T17:02:38.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Prof.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Models\\Prof.cs",
+              "RelativeDocumentMoniker": "Models\\Prof.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Models\\Prof.cs",
+              "RelativeToolTip": "Models\\Prof.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T17:01:05.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ClassResponse.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\DTOs\\Classroom\\ClassResponse.cs",
+              "RelativeDocumentMoniker": "DTOs\\Classroom\\ClassResponse.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\DTOs\\Classroom\\ClassResponse.cs",
+              "RelativeToolTip": "DTOs\\Classroom\\ClassResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T14:02:18.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-09T14:17:53.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-09T14:17:25.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ClassroomService.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Services\\Implementations\\ClassroomService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\ClassroomService.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Services\\Implementations\\ClassroomService.cs",
+              "RelativeToolTip": "Services\\Implementations\\ClassroomService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAADwv0gAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T13:53:18.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IClassroomService.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Services\\Interfaces\\IClassroomService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IClassroomService.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Services\\Interfaces\\IClassroomService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IClassroomService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T13:53:51.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IClassroomRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Repositories\\Interfaces\\IClassroomRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IClassroomRepository.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Repositories\\Interfaces\\IClassroomRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IClassroomRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T14:02:53.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CreateClassRequest.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\DTOs\\Classroom\\CreateClassRequest.cs",
+              "RelativeDocumentMoniker": "DTOs\\Classroom\\CreateClassRequest.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\DTOs\\Classroom\\CreateClassRequest.cs",
+              "RelativeToolTip": "DTOs\\Classroom\\CreateClassRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T14:02:22.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Services\\Implementations\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\AuthService.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\projetangular.nethoudaetraja\\EduPlatform.API\\Services\\Implementations\\AuthService.cs",
+              "RelativeToolTip": "Services\\Implementations\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T13:53:16.292Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,50 +1,148 @@
-<div class="public-container">
-  <section class="hero-section">
-    <div class="hero-content">
-      <div class="hero-header">
-        <h1 class="hero-title">{{ profName }}</h1>
-        <span class="hero-badge">Espace Public</span>
-      </div>
-      <p class="hero-description">
-        Ressources pédagogiques partagées par le professeur
+<div class="dashboard-container py-5">
+  <!-- 🧭 En-tête -->
+  <div
+    class="dashboard-header d-flex flex-wrap justify-content-between align-items-center mb-4 p-3 rounded shadow-sm bg-light border">
+    <div class="mb-3 mb-md-0">
+      <h1 class="dashboard-title fw-bold text-primary mb-1">
+        <i class="bi bi-journal-text me-2"></i> Cahier pédagogique
+      </h1>
+      <p class="dashboard-subtitle text-muted mb-0">
+        📖 Espace du professeur – créez et gérez vos cahiers pédagogiques par classe.
       </p>
     </div>
-  </section>
 
-  <section class="resources-section">
-    <div class="section-header">
-      <h2 class="section-title">
-        <span class="me-2">📚</span>
-        Ressources disponibles
-      </h2>
-      <span class="resource-count">{{ files.length }} ressource(s)</span>
+    <div class="d-flex flex-wrap gap-2">
+      <button class="btn btn-outline-primary d-flex align-items-center px-3" (click)="gotoClasses()">
+        <i class="bi bi-speedometer2 me-2"></i>
+        <span>Tableau de bord</span>
+      </button>
     </div>
+  </div>
 
-    <div class="resources-grid" *ngIf="files.length > 0">
-      <div class="resource-card" *ngFor="let f of files">
-        <div class="resource-icon">
-          <span *ngIf="f.type === 0">📖</span>
-          <span *ngIf="f.type === 1">📝</span>
-          <span *ngIf="f.type === 2">🔬</span>
-          <span *ngIf="f.type === 3">📁</span>
-        </div>
-        
-        <div class="resource-content">
-          <h3 class="resource-title">{{ f.title }}</h3>
-          <span class="resource-type">{{ getTypeLabel(f.type) }}</span>
-        </div>
-        
-        <a class="btn btn-primary w-100 download-btn" [href]="f.url" target="_blank">
-          <span class="me-2">⬇️</span>
-          Télécharger
-        </a>
+  <!-- 🧩 Section Upload -->
+  <div class="row g-4 align-items-start">
+    <div class="col-12 col-lg-4">
+      <div class="card p-4 shadow-sm">
+<h3 class="card-title mb-3 text-dark fw-bold">📤 Ajouter un nouveau cahier</h3>
+
+        <form (ngSubmit)="uploadCahier()">
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Classe</label>
+            <select
+              class="form-select"
+              [(ngModel)]="selectedClassId"
+              name="classId"
+              (change)="loadCahiers()"
+              required>
+              <option [ngValue]="null">-- Sélectionner une classe --</option>
+              <option *ngFor="let c of classes" [value]="c.id">{{ c.name }}</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Titre</label>
+            <input
+              class="form-control"
+              [(ngModel)]="fileName"
+              name="fileName"
+              placeholder="Ex: Chapitre 3 – Réseaux"
+              required />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Description</label>
+            <textarea
+              class="form-control"
+              [(ngModel)]="description"
+              name="description"
+              placeholder="Ex: Étude du modèle OSI et TCP/IP"
+              rows="2"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Fichier</label>
+            <input type="file" class="form-control" (change)="onFileSelected($event)" required />
+          </div>
+
+          <button class="btn btn-primary w-100" [disabled]="uploading">
+            <ng-container *ngIf="!uploading">
+              <i class="bi bi-cloud-upload me-2"></i> Uploader
+            </ng-container>
+            <ng-container *ngIf="uploading">
+              <span class="spinner-border spinner-border-sm"></span> Upload en cours...
+            </ng-container>
+          </button>
+        </form>
       </div>
     </div>
 
-    <div class="empty-state" *ngIf="files.length === 0">
-      <div class="empty-icon">📭</div>
-      <p class="empty-text">Aucune ressource disponible</p>
-      <p class="empty-subtext">Le professeur n'a pas encore partagé de ressources</p>
+    <!-- 📚 Liste des cahiers -->
+    <div class="col-12 col-lg-8">
+      <div class="card p-4 shadow-sm">
+<h3 class="section-title mb-4 text-center text-dark fw-bold">
+          📘 Cahiers de la classe sélectionnée
+        </h3>
+
+        <div *ngIf="pagedCahiers.length > 0; else noCahiers" class="files-grid">
+          <div class="file-card shadow-sm" *ngFor="let cahier of pagedCahiers">
+            <!-- 🟦 Titre -->
+<h5 class="file-title fw-bold mb-1 text-dark">
+              <i class="bi bi-journal-text me-2"></i>{{ splitTitle(cahier.fileName).main }}
+            </h5>
+
+            <!-- 🟨 Description (extraite du titre) -->
+            <p *ngIf="splitTitle(cahier.fileName).desc" class="file-description text-muted small mb-2">
+              {{ splitTitle(cahier.fileName).desc }}
+            </p>
+
+            <!-- 📅 Date -->
+            <p class="file-date text-muted small mb-3">
+              <i class="bi bi-calendar-event me-1"></i>
+              Ajouté le {{ cahier.createdAt | date: 'dd MMM yyyy, HH:mm' }}
+            </p>
+
+            <!-- 🔘 Actions -->
+            <div class="d-grid gap-2">
+              <a
+                [href]="cahier.fileUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline-success btn-sm">
+                <i class="bi bi-box-arrow-up-right me-1"></i>  Télécharger
+              </a>
+              <button
+                class="btn btn-outline-danger btn-sm"
+                (click)="deleteCahier(cahier.id)">
+                <i class="bi bi-trash me-1"></i> Supprimer
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔢 Pagination -->
+        <nav *ngIf="totalPages > 1" class="mt-4">
+          <ul class="pagination justify-content-center">
+            <li class="page-item" [class.disabled]="currentPage === 1">
+              <button class="page-link" (click)="changePage(currentPage - 1)">Précédent</button>
+            </li>
+            <li
+              class="page-item"
+              *ngFor="let page of [].constructor(totalPages); let i = index"
+              [class.active]="currentPage === i + 1">
+              <button class="page-link" (click)="changePage(i + 1)">{{ i + 1 }}</button>
+            </li>
+            <li class="page-item" [class.disabled]="currentPage === totalPages">
+              <button class="page-link" (click)="changePage(currentPage + 1)">Suivant</button>
+            </li>
+          </ul>
+        </nav>
+
+        <ng-template #noCahiers>
+          <div class="alert alert-info text-center mt-4">
+            📭 Aucun cahier pédagogique n’a encore été uploadé pour cette classe.
+          </div>
+        </ng-template>
+      </div>
     </div>
-  </section>
+  </div>
 </div>

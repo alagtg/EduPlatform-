@@ -22,6 +22,76 @@ namespace EduPlatform.API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("EduPlatform.API.Models.CahierPedagogique", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ClassId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("FilePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileUrl")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClassId");
+
+                    b.ToTable("CahiersPedagogiques");
+                });
+
+            modelBuilder.Entity("EduPlatform.API.Models.Classroom", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AccessCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProfId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProfId");
+
+                    b.ToTable("Classrooms");
+                });
+
             modelBuilder.Entity("EduPlatform.API.Models.Comment", b =>
                 {
                     b.Property<int>("Id")
@@ -38,12 +108,11 @@ namespace EduPlatform.API.Migrations
 
                     b.Property<string>("Message")
                         .IsRequired()
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserName")
-                        .HasMaxLength(80)
-                        .HasColumnType("nvarchar(80)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -60,33 +129,45 @@ namespace EduPlatform.API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("ClassroomId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("DownloadCount")
                         .HasColumnType("int");
 
-                    b.Property<string>("Path")
+                    b.Property<string>("FileName")
                         .IsRequired()
-                        .HasMaxLength(300)
-                        .HasColumnType("nvarchar(300)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FilePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ProfId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("ProfId1")
+                        .HasColumnType("int");
+
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(180)
-                        .HasColumnType("nvarchar(180)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Type")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ClassroomId");
+
                     b.HasIndex("ProfId");
 
-                    b.ToTable("Files");
+                    b.HasIndex("ProfId1");
+
+                    b.ToTable("FileResources");
                 });
 
             modelBuilder.Entity("EduPlatform.API.Models.Prof", b =>
@@ -121,19 +202,35 @@ namespace EduPlatform.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Email")
-                        .IsUnique();
-
-                    b.HasIndex("Slug")
-                        .IsUnique();
-
                     b.ToTable("Profs");
+                });
+
+            modelBuilder.Entity("EduPlatform.API.Models.CahierPedagogique", b =>
+                {
+                    b.HasOne("EduPlatform.API.Models.Classroom", "Classroom")
+                        .WithMany("Cahiers")
+                        .HasForeignKey("ClassId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Classroom");
+                });
+
+            modelBuilder.Entity("EduPlatform.API.Models.Classroom", b =>
+                {
+                    b.HasOne("EduPlatform.API.Models.Prof", "Prof")
+                        .WithMany()
+                        .HasForeignKey("ProfId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Prof");
                 });
 
             modelBuilder.Entity("EduPlatform.API.Models.Comment", b =>
                 {
                     b.HasOne("EduPlatform.API.Models.FileResource", "File")
-                        .WithMany("Comments")
+                        .WithMany()
                         .HasForeignKey("FileResourceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -143,18 +240,30 @@ namespace EduPlatform.API.Migrations
 
             modelBuilder.Entity("EduPlatform.API.Models.FileResource", b =>
                 {
-                    b.HasOne("EduPlatform.API.Models.Prof", "Prof")
+                    b.HasOne("EduPlatform.API.Models.Classroom", "Classroom")
                         .WithMany("Files")
+                        .HasForeignKey("ClassroomId");
+
+                    b.HasOne("EduPlatform.API.Models.Prof", "Prof")
+                        .WithMany()
                         .HasForeignKey("ProfId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("EduPlatform.API.Models.Prof", null)
+                        .WithMany("Files")
+                        .HasForeignKey("ProfId1");
+
+                    b.Navigation("Classroom");
+
                     b.Navigation("Prof");
                 });
 
-            modelBuilder.Entity("EduPlatform.API.Models.FileResource", b =>
+            modelBuilder.Entity("EduPlatform.API.Models.Classroom", b =>
                 {
-                    b.Navigation("Comments");
+                    b.Navigation("Cahiers");
+
+                    b.Navigation("Files");
                 });
 
             modelBuilder.Entity("EduPlatform.API.Models.Prof", b =>

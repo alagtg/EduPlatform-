@@ -1,0 +1,23 @@
+<section class="container py-5">
+  <h2 class="fw-bold mb-4 text-center">Classes du professeur</h2>
+
+  <div *ngIf="loading" class="text-center my-5">
+    <div class="spinner-border text-primary"></div>
+  </div>
+
+  <div *ngIf="!loading && classes.length > 0" class="row g-4">
+    <div class="col-md-4" *ngFor="let c of classes">
+      <div class="card shadow-sm text-center p-3">
+        <h4 class="fw-bold">{{ c.name }}</h4>
+        <p class="text-muted">{{ c.description }}</p>
+        <a [routerLink]="['/student/join']" [queryParams]="{ code: c.accessCode, id: c.id }" class="btn btn-primary">
+          Accéder à la classe
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!loading && !classes.length" class="alert alert-info text-center">
+    Aucune classe pour ce professeur.
+  </div>
+</section>

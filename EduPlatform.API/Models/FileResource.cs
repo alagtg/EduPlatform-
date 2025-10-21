@@ -1,31 +1,25 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace EduPlatform.API.Models
+﻿namespace EduPlatform.API.Models
 {
+    public enum FileType
+    {
+        Cours = 0,
+        TD = 1,
+        TP = 2,
+        Autre = 3
+    }
+
     public class FileResource
     {
         public int Id { get; set; }
-
-        [Required]
-        public int ProfId { get; set; }
-
-        [ForeignKey(nameof(ProfId))]
-        public Prof Prof { get; set; } = default!;
-
-        [Required, MaxLength(180)]
-        public string Title { get; set; } = default!;
-
-        [Required]
+        public string Title { get; set; } = string.Empty;
         public FileType Type { get; set; }
-
-        [Required, MaxLength(300)]
-        public string Path { get; set; } = default!; // relative: /Uploads/xxx.pdf
-
-        public int DownloadCount { get; set; } = 0;
-
+        public string FileName { get; set; } = string.Empty;
+        public string FilePath { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-
-        public ICollection<Comment> Comments { get; set; } = new List<Comment>();
+        public int ProfId { get; set; }
+        public Prof Prof { get; set; } = null!;
+        public int? ClassroomId { get; set; }
+        public Classroom? Classroom { get; set; }
+        public int DownloadCount { get; set; } = 0;
     }
 }

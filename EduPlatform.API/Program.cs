@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,23 +21,34 @@ builder.Services.AddDbContext<EduDbContext>(options =>
 // ======================================
 // 🔹 2. INJECTION DE DÉPENDANCES (DI)
 // ======================================
+builder.Services.AddScoped<IClassroomService, ClassroomService>();
 
 // Repositories
 builder.Services.AddScoped<IProfRepository, ProfRepository>();
 builder.Services.AddScoped<IFileRepository, FileRepository>();
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+builder.Services.AddScoped<IClassroomRepository, ClassroomRepository>();
 
 // Services
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IProfService, ProfService>();
 builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddScoped<IClassroomService, ClassroomService>();
 
 builder.Services.AddHttpContextAccessor();
 
 // ======================================
-// 🔹 3. CONFIGURATION CONTROLLERS + SWAGGER
+// 🔹 3. CONFIGURATION CONTROLLERS + JSON + SWAGGER
 // ======================================
-builder.Services.AddControllers();
+
+// ✅ Ajoute les options JSON pour éviter les boucles entre entités EF
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+        options.JsonSerializerOptions.WriteIndented = true;
+    });
+
 builder.Services.AddEndpointsApiExplorer();
 
 // ✅ Swagger avec Auth JWT
@@ -49,7 +61,7 @@ builder.Services.AddSwaggerGen(c =>
         Description = "API d'une plateforme éducative (Professeurs / Étudiants)"
     });
 
-    // 🔐 Définition de la sécurité JWT pour Swagger
+    // Authentification JWT dans Swagger
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -60,7 +72,6 @@ builder.Services.AddSwaggerGen(c =>
         Description = "Saisis : 'Bearer' [espace] + ton token JWT.\n\nExemple : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
     });
 
-    // 🔐 Application de la sécurité JWT à toutes les routes protégées
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
@@ -110,7 +121,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAngularApp",
         policy =>
         {
-            policy.WithOrigins("http://localhost:4200") // URL Angular
+            policy.WithOrigins("http://localhost:4200", "https://localhost:4200")
                   .AllowAnyHeader()
                   .AllowAnyMethod()
                   .AllowCredentials();
@@ -122,30 +133,59 @@ builder.Services.AddCors(options =>
 // ======================================
 var app = builder.Build();
 
-// 🔸 Middleware pour servir les fichiers (uploads)
+// ✅ Vérifie et prépare les dossiers wwwroot / uploads / cahiers
+var webRoot = app.Environment.WebRootPath;
+if (string.IsNullOrEmpty(webRoot))
+{
+    webRoot = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+    app.Environment.WebRootPath = webRoot;
+}
+
+if (!Directory.Exists(webRoot))
+{
+    Directory.CreateDirectory(webRoot);
+    Console.WriteLine($"📁 Dossier créé : {webRoot}");
+}
+
+var uploadsPath = Path.Combine(webRoot, "uploads", "cahiers");
+if (!Directory.Exists(uploadsPath))
+{
+    Directory.CreateDirectory(uploadsPath);
+    Console.WriteLine($"📁 Dossier créé : {uploadsPath}");
+}
+else
+{
+    Console.WriteLine($"📁 Dossier existant : {uploadsPath}");
+}
+
+// ======================================
+// 🔹 7. MIDDLEWARE
+// ======================================
+
+// ✅ Accès public aux fichiers
 app.UseStaticFiles();
 
-// 🔸 Swagger disponible en Dev
+// ✅ Swagger
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// 🔸 HTTPS
+// ✅ HTTPS redirection
 app.UseHttpsRedirection();
 
-// 🔸 CORS (pour communication Angular ↔ .NET)
+// ✅ CORS pour Angular
 app.UseCors("AllowAngularApp");
 
-// 🔸 Authentification & Autorisation
+// ✅ Authentification & autorisation
 app.UseAuthentication();
 app.UseAuthorization();
 
-// 🔸 Mapping des contrôleurs
+// ✅ Contrôleurs
 app.MapControllers();
 
 // ======================================
-// 🔹 7. LANCEMENT
+// 🔹 8. LANCEMENT
 // ======================================
 app.Run();

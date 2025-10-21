@@ -1,0 +1,18 @@
+.student-home {
+  background: #f9fafc;
+  min-height: 100vh;
+
+  h1 {
+    color: #0d47a1;
+  }
+
+  .card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+}
